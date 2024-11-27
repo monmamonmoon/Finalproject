@@ -42,13 +42,12 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
 </head>
-<body>
-    
-<div>
-    <main class="py-4">
-        @yield('content')
-    </main>
-</div>
+
+<!-- Page Content -->
+<main>
+    @yield('content')
+</main>
+
 <script src="../assets/vendor/libs/jquery/jquery.js"></script>
 <script src="../assets/vendor/libs/popper/popper.js"></script>
 <script src="../assets/vendor/js/bootstrap.js"></script>
@@ -67,4 +66,5 @@
 <!-- Place this tag before closing body tag for github widget button. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
+
 </html>

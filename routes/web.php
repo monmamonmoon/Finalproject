@@ -4,9 +4,15 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth; 
 use Illuminate\Support\Facades\Route;  // Add the Route namespace
 
-Route::get('/', function () { 
-    return redirect(route('login')); 
-}); 
+// Route::get('/', function () { 
+//     return redirect(route('login')); 
+// }); 
+
+// Set the root route to show the welcome page
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
 
 Auth::routes(); 
 
@@ -22,4 +28,4 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/dashboard', [App\Http\Controllers\Admin\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
 
 //user
-Route::get('/client', [App\Http\Controllers\client\Dashboard\ClientController::class, 'index'])->name('cliet.index');
+// Route::get('/client', [App\Http\Controllers\client\Dashboard\ClientController::class, 'index'])->name('cliet.index');
